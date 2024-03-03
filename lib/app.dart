@@ -12,11 +12,12 @@ class YesNoApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-    create: (context) => YesNoGeneratorCubit(
-            getRandomYesOrNoUseCase: GetRandomYesOrNoUseCase(
-                yesNoRepository:
-                    YesNoRepositoryImpl(remoteDataSource: RemoteDataSource()))),
+      create: (context) => YesNoGeneratorCubit(
+          getRandomYesOrNoUseCase: GetRandomYesOrNoUseCase(
+              yesNoRepository:
+                  YesNoRepositoryImpl(remoteDataSource: RemoteDataSource()))),
       child: MaterialApp(
+        title: 'Yes No Generator',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
